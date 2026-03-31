@@ -7,7 +7,7 @@ function Earth({ onPlanetClick, isPaused }) {
     <Orbits
       orbitSize={330}
       planetSize={15}
-      image="/images/icons/earth.png"
+      image="images/icons/earth.png"
       speed={planetSpeed}
       orbitColor="rgba(100, 170, 255, 0.30)"
       onPlanetClick={() => onPlanetClick(PlanetData.Earth)}

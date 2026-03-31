@@ -6,7 +6,7 @@ function Jupiter({ onPlanetClick, isPaused }) {
     <Orbits
       orbitSize={630}
       planetSize={30}
-      image="/images/icons/jupiter.png"
+      image="images/icons/jupiter.png"
       speed={planetSpeed}
       orbitColor="rgba(220, 170, 120, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Jupiter)}

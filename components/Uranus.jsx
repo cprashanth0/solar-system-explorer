@@ -6,7 +6,7 @@ function Uranus({ onPlanetClick, isPaused }) {
     <Orbits
       orbitSize={910}
       planetSize={22}
-      image="/images/icons/uranus.png"
+      image="images/icons/uranus.png"
       speed={planetSpeed}
       orbitColor="rgba(150, 235, 255, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Uranus)}

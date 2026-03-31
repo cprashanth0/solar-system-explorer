@@ -7,7 +7,7 @@ function Mercury({onPlanetClick, isPaused}){
     <Orbits
       orbitSize={180}
       planetSize={10}
-      image="/images/icons/mercury.png"
+      image="images/icons/mercury.png"
       speed={planetSpeed}
       orbitColor="rgba(180, 180, 180, 0.28)"
       onPlanetClick={() => onPlanetClick(PlanetData.Mercury)}
