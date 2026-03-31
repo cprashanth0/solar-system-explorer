@@ -6,7 +6,7 @@ function Saturn({ onPlanetClick, isPaused }) {
     <Orbits
       orbitSize={770}
       planetSize={47} //28 actual
-      image="/images/icons/saturn2.png"
+      image="/public/images/icons/saturn2.png"
       speed={planetSpeed}
       orbitColor="rgba(230, 210, 140, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Saturn)}
