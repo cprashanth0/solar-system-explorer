@@ -15,6 +15,7 @@ function SolarScene({isPaused}) {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   //console.log(selectedPlanet);
   return (
+    <>
       <div style={styles.scene}>
       <Sun onPlanetClick={setSelectedPlanet}/>
       <Mercury onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
@@ -26,11 +27,13 @@ function SolarScene({isPaused}) {
       <Saturn onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
       <Uranus onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
       <Neptune onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <PlanetPopup
+      
+    </div>
+    <PlanetPopup
         planet={selectedPlanet}
         onClose={() => setSelectedPlanet(null)}
       />
-    </div>
+    </>
   );
 }
 

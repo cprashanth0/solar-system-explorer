@@ -16,7 +16,7 @@ function App() {
           </p>
         </div>
 
-        <SolarScene isPaused = {isPaused}/>
+        <SolarScene isPaused = {isPaused} />
       </div>
     </div>
   );
@@ -30,6 +30,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    position: "relative",
   },
 
   sceneWrapper: {
@@ -43,7 +44,7 @@ const styles = {
     left: "50%",
     transform: "translateX(-50%)",
     textAlign: "center",
-    zIndex: 10,
+    zIndex: 1,
     pointerEvents: "none",
     background: "transparent",
     width: "max-content",

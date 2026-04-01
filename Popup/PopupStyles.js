@@ -6,7 +6,7 @@ const PopupStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    zIndex: 1000,
+    zIndex: 2000,
     padding: "20px",
   },
 
@@ -25,7 +25,7 @@ const PopupStyles = {
     display: "flex",
     flexDirection: "column",
     backdropFilter: "blur(10px)",
-    zIndex: 2000,
+    zIndex: 1000,
   },
 
   closeButton: {
@@ -131,7 +131,7 @@ const PopupStyles = {
     fontStyle: "italic",
     border: "1px dashed",
     borderRadius: "5px",
-    padding: "6px",
+    padding: "10px",
   },
 
   detailsText: {
