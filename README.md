@@ -1,14 +1,26 @@
 # Solar System Explorer
 
-An interactive solar system built with React and Vite.
-Click on planets to view information and explore orbital motion.
+[Live Website](https://cprashanth0.github.io/solar-system-explorer/)
+
+---
+
+## Overview
+
+Solar System Explorer is an interactive web application built using React and Vite.  
+It visualizes the solar system with orbiting planets and allows users to click on celestial bodies to view detailed information.
+
+---
 
 ## Features
 
-- Interactive planets
-- Planet information popups
-- Orbital animation
-- Play / pause control
+- Interactive solar system visualization
+- Clickable planets with information popups
+- Orbital motion animations
+- Play and pause control for animations
+- Responsive layout for different screen sizes
+
+<!-- Add more features -->
+---
 
 ## Tech Stack
 
@@ -17,24 +29,28 @@ Click on planets to view information and explore orbital motion.
 - JavaScript
 - CSS
 
-## Project Structure
+---
 
-components/
-Popup/
-public/images/
-docs/
-App.jsx
-SolarScene.jsx
-Planet.jsx
-Orbits.jsx
-main.jsx
-index.html
-index.css
-vite.config.js
-package.json
+## Running the Project Locally
 
-## Run Locally
+Follow these steps to run the project on your machine:
+
+### 1. Download the repository
+
+Option A: Using Git
 
 ```bash
+# Clone the repository from GitHub
+git clone https://github.com/cprashanth0/solar-system-explorer.git
+
+# Move into the project directory
+cd solar-system-explorer
+
+# Install all required dependencies
 npm install
+
+# Run the app locally
 npm run dev
+
+# Copy and paste the outputted url into your browser - this is a dyanmic site that updates whenever you save your code.
+
