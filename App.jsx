@@ -43,7 +43,7 @@ const styles = {
     left: "50%",
     transform: "translateX(-50%)",
     textAlign: "center",
-    zIndex: 19,
+    zIndex: 10,
     pointerEvents: "none",
     background: "transparent",
     width: "max-content",

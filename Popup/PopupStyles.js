@@ -25,6 +25,7 @@ const PopupStyles = {
     display: "flex",
     flexDirection: "column",
     backdropFilter: "blur(10px)",
+    zIndex: 2000,
   },
 
   closeButton: {
