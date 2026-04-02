@@ -21,7 +21,6 @@ function App() {
     </div>
   );
 }
-
 const styles = {
   app: {
     margin: 0,
@@ -54,7 +53,7 @@ const styles = {
   title: {
     margin: 0,
     color: "white",
-    fontSize: "28px",
+    fontSize: "4.5vmin",
     fontWeight: 600,
     background: "transparent",
   },
@@ -62,22 +61,24 @@ const styles = {
   subtitle: {
     margin: "6px 0 0 0",
     color: "rgba(255,255,255,0.75)",
-    fontSize: "14px",
+    fontSize: "1.7vmin",
     fontWeight: 300,
     background: "transparent",
   },
 
   pauseButton: {
     position: "absolute",
-    top: "24px",
-    left: "24px",
+    top: "3vmin",
+    left: "3vmin",
     zIndex: 9999,
-    padding: "10px 18px",
+    padding: "2vmin 3vmin",
+    paddingTop:"2vmin",
+    paddingBottom: "3vmin",
     borderRadius: "999px",
     border: "1px solid rgba(255,255,255,0.2)",
     background: "rgba(20,20,28,0.72)",
     color: "white",
-    fontSize: "0.95rem",
+    fontSize: "2.25vmin",
     fontWeight: 300,
     letterSpacing: "0.04em",
     cursor: "pointer",
@@ -85,7 +86,8 @@ const styles = {
     WebkitBackdropFilter: "blur(8px)",
     boxShadow: "0 0 20px rgba(255,255,255,0.08)",
     fontFamily: "Outfit, sans-serif",
-    width: "min(110px)",
+    width: "16vmin",
+    height: "7.5vmin"
   },
 
 };

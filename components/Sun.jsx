@@ -2,10 +2,11 @@ import sunImage from "/images/icons/sun.png";
 import { PlanetData } from "../Popup/PlanetData";
 
 function Sun({ onPlanetClick }) {
+  const size = "9"
   const sun = {
     position: "absolute",
-    width: "110px",
-    height: "110px",
+    width: `${size}vmin`,
+    height: `${size}vmin`,
     borderRadius: "50%",
     top: "50%",
     left: "50%",
@@ -16,9 +17,9 @@ function Sun({ onPlanetClick }) {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     boxShadow: `
-      0 0 25px rgba(255, 210, 80, 0.9),
-      0 0 55px rgba(255, 170, 40, 0.7),
-      0 0 110px rgba(255, 120, 0, 0.45)
+      0 0 ${size * 0.4}vmin rgba(255, 210, 80, 0.9),
+      0 0 ${size * 1}vmin rgba(255, 170, 40, 0.7),
+      0 0 ${size * 1}vmin rgba(255, 120, 0, 0.45)
     `,
     zIndex: 10,
     cursor: "pointer",

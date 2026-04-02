@@ -5,12 +5,14 @@ function Venus({ onPlanetClick, isPaused }){
   const planetSpeed = isPaused ? 0 : 0.035;
   return (
     <Orbits
-      orbitSize={250}
-      planetSize={15}
+      orbitSize={0.26}
+      planetSize={1.8}
       image="images/icons/venus.png"
       speed={planetSpeed}
       orbitColor="rgba(230, 190, 120, 0.28)"
       onPlanetClick={() => onPlanetClick(PlanetData.Venus)}
+      rotateSpeed = {6}
+      isPaused = {isPaused}
     />
   );
 }

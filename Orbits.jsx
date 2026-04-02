@@ -2,13 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import Planet from "./Planet";
 
 function Orbits({
-  orbitSize,
-  planetSize,
+  orbitSize,     // now expected as 0–1 (e.g., 0.9 = 90% of screen)
+  planetSize,    // now in vmin units (e.g., 2, 3, 5)
   image,
   speed = 0.02,
   orbitColor = "rgba(255,255,255,0.18)",
   orbitThickness = 2,
   onPlanetClick,
+  rotateSpeed=70,
+  isPaused,
 }) {
   const [angle, setAngle] = useState(0);
   const lastTimeRef = useRef(null);
@@ -31,10 +33,13 @@ function Orbits({
     return () => cancelAnimationFrame(animationFrameId);
   }, [speed]);
 
+  // ✅ Responsive orbit size using vmin
+  const size = `${orbitSize * 100}vmin`;
+
   const orbitRing = {
     position: "absolute",
-    width: `${orbitSize}px`,
-    height: `${orbitSize}px`,
+    width: size,
+    height: size,
     borderRadius: "50%",
     top: "50%",
     left: "50%",
@@ -46,8 +51,8 @@ function Orbits({
 
   const rotatingLayer = {
     position: "absolute",
-    width: `${orbitSize}px`,
-    height: `${orbitSize}px`,
+    width: size,
+    height: size,
     borderRadius: "50%",
     top: "50%",
     left: "50%",
@@ -65,6 +70,8 @@ function Orbits({
           size={planetSize}
           image={image}
           onClick={onPlanetClick}
+          rotateSpeed={rotateSpeed}
+          isPaused={isPaused}
         />
       </div>
     </>

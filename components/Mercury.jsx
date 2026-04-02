@@ -5,12 +5,14 @@ function Mercury({onPlanetClick, isPaused}){
   const planetSpeed = isPaused ? 0 : 0.06;
   return (
     <Orbits
-      orbitSize={180}
-      planetSize={10}
+      orbitSize={0.18}
+      planetSize={1.2}
       image="images/icons/mercury.png"
       speed={planetSpeed}
       orbitColor="rgba(180, 180, 180, 0.28)"
       onPlanetClick={() => onPlanetClick(PlanetData.Mercury)}
+      orbitSpeed = {3}
+      isPaused = {isPaused}
     />
   );
 }

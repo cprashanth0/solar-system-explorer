@@ -1,4 +1,4 @@
-function Planet({ size, image, onClick }) {
+function Planet({ size, image, onClick, rotateSpeed, isPaused }) {
   const hitboxSize = size * 3;
 
   const wrapper = {
@@ -6,8 +6,8 @@ function Planet({ size, image, onClick }) {
     top: "50%",
     left: "100%",
     transform: "translate(-50%, -50%)",
-    width: `${hitboxSize}px`,
-    height: `${hitboxSize}px`,
+    width: `${hitboxSize}vmin`,
+    height: `${hitboxSize}vmin`,
     cursor: "pointer",
     pointerEvents: "auto",
     zIndex: 6,
@@ -18,8 +18,8 @@ function Planet({ size, image, onClick }) {
   const bS = image.includes("saturn") ? "none" : "0 0 6px rgba(255, 255, 255, 0.25)";
   const bord = image.includes("saturn") ? "none" : "1px solid rgba(255,255,255,0.18)";
   const planet = {
-    width: `${size}px`,
-    height: `${size}px`,
+    width: `${size}vmin`,
+    height: `${size}vmin`,
     borderRadius: "50%",
     boxShadow: bS,
     backgroundImage: `url(${image})`,
@@ -27,6 +27,8 @@ function Planet({ size, image, onClick }) {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     border: bord,
+    animation: `spin ${rotateSpeed}s linear infinite`,
+    animationPlayState: isPaused ? "paused" : "running",
   };
 
   return (

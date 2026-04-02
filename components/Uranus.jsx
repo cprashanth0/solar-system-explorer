@@ -5,12 +5,14 @@ function Uranus({ onPlanetClick, isPaused }) {
   const planetSpeed = isPaused ? 0 : 0.007;
   return (
     <Orbits
-      orbitSize={910}
-      planetSize={22}
+      orbitSize={0.82}
+      planetSize={3}
       image={uranusImage}
       speed={planetSpeed}
       orbitColor="rgba(150, 235, 255, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Uranus)}
+      rotateSpeed = {120}
+      isPaused = {isPaused}
     />
   );
 }
