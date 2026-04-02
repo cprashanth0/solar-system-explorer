@@ -1,14 +1,14 @@
-import Sun from "./components/Sun";
-import Earth from "./components/Earth";
-import Mars from "./components/Mars";
-import Mercury from "./components/Mercury";
-import Venus from "./components/Venus";
-import Jupiter from "./components/Jupiter";
-import Saturn from "./components/Saturn";
-import Uranus from "./components/Uranus";
-import Neptune from "./components/Neptune";
-import PlanetPopup from "./Popup/PlanetPopup";
-import AsteroidBelt from "./components/Asteroids";
+import Sun from "../components/Sun";
+import Earth from "../components/Earth";
+import Mars from "../components/Mars";
+import Mercury from "../components/Mercury";
+import Venus from "../components/Venus";
+import Jupiter from "../components/Jupiter";
+import Saturn from "../components/Saturn";
+import Uranus from "../components/Uranus";
+import Neptune from "../components/Neptune";
+import PlanetPopup from "../Popup/PlanetPopup";
+import AsteroidBelt from "../components/Asteroids";
 import { useState } from "react";
 
 function SolarScene({isPaused}) {

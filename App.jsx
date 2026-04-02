@@ -1,4 +1,4 @@
-import SolarScene from "./SolarScene";
+import SolarScene from "./frames/SolarScene";
 import { useState } from "react";
 function App() {
   const [isPaused, setIsPaused] = useState(false);
