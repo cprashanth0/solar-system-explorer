@@ -95,7 +95,7 @@ export const PlanetData = {
     caption: "An image of Mars centered on the Valles Marineris canyon system.",
     credit: "JPL-Caltech/NASA",
     extraStatLabel: "Height of Olympus Mons",
-    extraStat: "~22 km high",
+    extraStat: "~22 km",
   },
 
   AsteroidBelt: {

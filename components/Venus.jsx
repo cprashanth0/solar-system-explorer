@@ -1,4 +1,4 @@
-import Orbits from "../Orbits.jsx";
+import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
 
 function Venus({ onPlanetClick, isPaused }){

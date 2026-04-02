@@ -1,4 +1,4 @@
-import Orbits from "../Orbits.jsx";
+import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
 import uranusImage from "/images/icons/uranus.png";
 function Uranus({ onPlanetClick, isPaused }) {
