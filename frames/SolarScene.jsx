@@ -11,22 +11,22 @@ import PlanetPopup from "../Popup/PlanetPopup";
 import AsteroidBelt from "../components/Asteroids";
 import { useState } from "react";
 
-function SolarScene({isPaused}) {
+function SolarScene({resetKey, speedTimes}) {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   //console.log(selectedPlanet);
   return (
     <>
       <div style={styles.scene}>
       <Sun onPlanetClick={setSelectedPlanet}/>
-      <Mercury onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Venus onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Earth onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Mars onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <AsteroidBelt onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Jupiter onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Saturn onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Uranus onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
-      <Neptune onPlanetClick={setSelectedPlanet} isPaused = {isPaused}/>
+      <Mercury onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Venus onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Earth onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Mars onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <AsteroidBelt onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Jupiter onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Saturn onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Uranus onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
+      <Neptune onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
       
     </div>
     <PlanetPopup

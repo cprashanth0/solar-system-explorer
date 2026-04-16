@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { PlanetData } from "../Popup/PlanetData.js";
 
-function AsteroidBelt({ onPlanetClick, isPaused }) {
+function AsteroidBelt({ onPlanetClick, speedTimes }) {
   const [asteroids] = useState(() => {
     const count = 220;
 
     return Array.from({ length: count }, (_, i) => {
       const radius = 0.24 + Math.random() * 0.01;
-
       const angle = Math.random() * Math.PI * 2;
 
       return {
@@ -20,11 +19,15 @@ function AsteroidBelt({ onPlanetClick, isPaused }) {
     });
   });
 
+  const baseDuration = 200;
+  const duration =
+    speedTimes === 0 ? "999999s" : `${baseDuration / speedTimes}s`;
+
   return (
     <div
       style={{
         ...belt,
-        animationPlayState: isPaused ? "paused" : "running",
+        animation: `spin ${duration} linear infinite`,
       }}
     >
       {asteroids.map((asteroid) => {

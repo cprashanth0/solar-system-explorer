@@ -1,7 +1,7 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-function Jupiter({ onPlanetClick, isPaused }) {
-  const planetSpeed = isPaused ? 0 : 0.013;
+function Jupiter({ onPlanetClick, resetKey, speedTimes }) {
+  const planetSpeed = 0.013 * speedTimes;
   return (
     <Orbits
       orbitSize={0.58}
@@ -11,7 +11,7 @@ function Jupiter({ onPlanetClick, isPaused }) {
       orbitColor="rgba(220, 170, 120, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Jupiter)}
       rotateSpeed = {60}
-      isPaused = {isPaused}
+      resetKey = {resetKey}
     />
   );
 }

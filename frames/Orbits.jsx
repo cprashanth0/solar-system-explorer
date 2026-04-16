@@ -2,25 +2,26 @@ import { useEffect, useRef, useState } from "react";
 import Planet from "./Planet";
 
 function Orbits({
-  orbitSize,     // now expected as 0–1 (e.g., 0.9 = 90% of screen)
-  planetSize,    // now in vmin units (e.g., 2, 3, 5)
+  orbitSize, //percentage of screen
+  planetSize, //vmin units
   image,
   speed = 0.02,
   orbitColor = "rgba(255,255,255,0.18)",
   orbitThickness = 2,
   onPlanetClick,
   rotateSpeed=70,
-  isPaused,
+  resetKey,
 }) {
   const [angle, setAngle] = useState(0);
   const lastTimeRef = useRef(null);
-
   useEffect(() => {
     let animationFrameId;
-
+    lastTimeRef.current = null;
+    
     const animate = (time) => {
       if (lastTimeRef.current !== null) {
         const deltaTime = time - lastTimeRef.current;
+
         setAngle((prev) => prev + speed * deltaTime);
       }
 
@@ -31,9 +32,14 @@ function Orbits({
     animationFrameId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [speed]);
-
-  // ✅ Responsive orbit size using vmin
+  }, [speed, resetKey]);
+  
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setAngle(0);
+    lastTimeRef.current = null;
+  }, [resetKey]);
+  
   const size = `${orbitSize * 100}vmin`;
 
   const orbitRing = {
@@ -71,7 +77,6 @@ function Orbits({
           image={image}
           onClick={onPlanetClick}
           rotateSpeed={rotateSpeed}
-          isPaused={isPaused}
         />
       </div>
     </>

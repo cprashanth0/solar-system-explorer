@@ -1,7 +1,7 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-function Saturn({ onPlanetClick, isPaused }) {
-  const planetSpeed = isPaused ? 0 : 0.01;
+function Saturn({ onPlanetClick, resetKey, speedTimes }) {
+  const planetSpeed = 0.01 * speedTimes;
   return (
     <Orbits
       orbitSize={0.70}
@@ -11,7 +11,7 @@ function Saturn({ onPlanetClick, isPaused }) {
       orbitColor="rgba(230, 210, 140, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Saturn)}
       rotateSpeed = {90}
-      isPaused = {isPaused}
+      resetKey = {resetKey}
     />
   );
 }

@@ -1,8 +1,8 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
 
-function Neptune({ onPlanetClick, isPaused }) {
-  const planetSpeed = isPaused ? 0 : 0.005;
+function Neptune({ onPlanetClick, resetKey, speedTimes }) {
+  const planetSpeed = 0.005 * speedTimes;
   return (
     <Orbits
       orbitSize={0.92}
@@ -12,7 +12,7 @@ function Neptune({ onPlanetClick, isPaused }) {
       orbitColor="rgba(110, 140, 255, 0.26)"
       onPlanetClick={() => onPlanetClick(PlanetData.Neptune)}
       rotateSpeed = {150}
-      isPaused = {isPaused}
+      resetKey = {resetKey}
     />
   );
 }

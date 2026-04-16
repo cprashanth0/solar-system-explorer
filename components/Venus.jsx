@@ -1,8 +1,8 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
 
-function Venus({ onPlanetClick, isPaused }){
-  const planetSpeed = isPaused ? 0 : 0.035;
+function Venus({ onPlanetClick, resetKey, speedTimes }){
+  const planetSpeed = 0.035 * speedTimes;
   return (
     <Orbits
       orbitSize={0.26}
@@ -12,7 +12,7 @@ function Venus({ onPlanetClick, isPaused }){
       orbitColor="rgba(230, 190, 120, 0.28)"
       onPlanetClick={() => onPlanetClick(PlanetData.Venus)}
       rotateSpeed = {6}
-      isPaused = {isPaused}
+      resetKey = {resetKey}
     />
   );
 }

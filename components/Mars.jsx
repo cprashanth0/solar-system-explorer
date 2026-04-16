@@ -1,7 +1,7 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-function Mars({ onPlanetClick, isPaused }) {
-  const planetSpeed = isPaused ? 0 : 0.024;
+function Mars({ onPlanetClick, resetKey, speedTimes }) {
+  const planetSpeed = 0.024 * speedTimes;
   return (
     <Orbits
       orbitSize={0.42}
@@ -11,7 +11,7 @@ function Mars({ onPlanetClick, isPaused }) {
       orbitColor="rgba(255, 120, 90, 0.28)"
       onPlanetClick={() => onPlanetClick(PlanetData.Mars)}
       rotateSpeed = {18}
-      isPaused = {isPaused}
+      resetKey = {resetKey}
     />
   );
 }
