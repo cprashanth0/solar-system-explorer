@@ -81,7 +81,7 @@ function PlanetPopupContent({ planet, onClose }) {
           <div style={PopupStyles.imageWrapper}>
             <img
               src={planet.image}
-              alt={planet.name}
+              alt={planet.alt}
               style={PopupStyles.largePlanetImage}
             />
 

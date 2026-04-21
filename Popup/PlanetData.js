@@ -2,6 +2,7 @@ export const PlanetData = {
   Sun: {
     name: "Sun",
     description: "The Sun is the star at the center of our solar system and contains almost all of its mass.",
+    alt: "Sun star at center of solar system showing solar surface, energy source driving planetary orbits and space physics",
     fact: "While the Sun appears yellow to us on Earth, it actually looks white from space!",
     details:
       "The Sun is a massive 4.6 billion year old star, powered by intense nuclear fusion in its core, generating extreme amounts of energy for all life on Earth to flourish.",
@@ -21,6 +22,7 @@ export const PlanetData = {
   Mercury: {
     name: "Mercury",
     description: "It's the closest planet to the Sun with extreme variance in temperatures.",
+    alt: "Mercury planet closest to the sun with rocky surface, fastest orbit in solar system and extreme temperatures",
     fact: "Isn't it cool that a day on Mercury is longer than its year?",
     details:
       "Mercury is the smallest planet in the solar system and has a heavily cratered rocky surface. Temperatures swing dramatically between day and night due to its lack of atmosphere.",
@@ -41,6 +43,7 @@ export const PlanetData = {
   Venus: {
     name: "Venus",
     description: "Venus, the second planet, is a rocky one, but is wrapped in thick clouds and the hottest planet in the entire solar system.",
+    alt:"Venus planet with thick atmosphere and greenhouse effect, second planet from sun and hottest planet in solar system",
     fact: "Venus spins extremely slowly and backwards compared to most planets.",
     details:
       "Venus is similar in size to Earth but has a dense carbon dioxide atmosphere that entraps heat through an extreme greenhouse effect. Its surface is hot enough to melt lead.",
@@ -61,6 +64,7 @@ export const PlanetData = {
   Earth: {
     name: "Earth",
     description: "Earth is the only known planet with liquid water on its surface and life.",
+    alt:"Earth planet with oceans and atmosphere supporting life, third planet from sun in the solar system",
     fact: "Did you know that 71% of Earth's surface is covered by water?",
     details:
       "Earth is the third planet from the Sun and has a protective atmosphere, active geology, and a strong magnetic field. It is the only known planet in the universe to harbor and support life.",
@@ -81,6 +85,7 @@ export const PlanetData = {
   Mars: {
     name: "Mars",
     description: "Mars is a desert world known as the Red Planet because of its rusty surface comprised of iron.",
+    alt:"Mars red planet with dusty surface and polar ice caps, fourth planet from sun and target of space exploration",
     fact: "Mars has the tallest volcano in the solar system: Olympus Mons.",
     details:
       "Mars has seasons, polar ice caps, canyons, and evidence that liquid water once flowed on its surface. It provides some of the most hopeful indications of extra-terrestrial life.",
@@ -101,6 +106,7 @@ export const PlanetData = {
   AsteroidBelt: {
     name: "The Asteroid Belt",
     description: "The Asteroid Belt is a region between Mars and Jupiter filled with rocky and metallic objects.",
+    alt:"Asteroid belt between Mars and Jupiter containing rocky objects orbiting the sun in the solar system",
     fact: "The belt is actually so sparsely filled that its combined total mass is only ~4% of our moons!",
     details:
       "The Asteroid Belt lies between the orbits of Mars and Jupiter. It contains dwarf planet Ceres and millions of other smaller bodies that are vestiges of the early formation of the solar system.",
@@ -121,6 +127,7 @@ export const PlanetData = {
   Jupiter: {
     name: "Jupiter",
     description: "Jupiter is the largest planet in the solar system, a gas giant with powerful storms.",
+    alt:"Jupiter gas giant largest planet in solar system with Great Red Spot storm and many moons",
     fact: "Did you know that the Great Red Spot, Jupiter's largest storm, is bigger than Earth itself?",
     details:
       "Jupiter is made mostly of hydrogen and helium. It stands out for its enormous size, strong magnetic field, and countless moons.",
@@ -141,6 +148,7 @@ export const PlanetData = {
   Saturn: {
     name: "Saturn",
     description: "Saturn is famous for its bright and complex ring system.",
+    alt:"Saturn gas giant with prominent ring system, second largest planet in solar system",
     fact: "Saturn is so low in density that it would float in water!",
     details:
       "Saturn is a gas giant composed mainly of hydrogen and helium. Its renowned rings are made mostly of ice particles and rocky debris, and it has many interesting moons.",
@@ -161,6 +169,7 @@ export const PlanetData = {
   Uranus: {
     name: "Uranus",
     description: "Uranus is the seventh planet from the sun, an large ice gas giant.",
+    alt:"Uranus ice giant planet tilted on its side with faint rings and cold atmosphere in outer solar system",
     fact: "Uranus is actually also surrounded by rings, 13 of them! See the picture.",
     details:
       "Uranus is an ice cold planet whose atmosphere contains methane and ammonia. Its extreme tilt leads to extreme seasons, different to any other planet.",
@@ -181,6 +190,7 @@ export const PlanetData = {
   Neptune: {
     name: "Neptune",
     description: "Neptune, an ice gas giant, is the most distant planet from the sun.",
+    alt:"Neptune ice giant farthest planet from sun with strong winds and deep blue atmosphere",
     fact: "Did you know that Neptune has the fastest winds in the solar system?",
     details:
       "Neptune is the last planet from the Sun and has a violent atmosphere with storms and supersonic winds. Its blue appearance comes from methane in the atmosphere.",
