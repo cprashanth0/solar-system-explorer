@@ -1,33 +1,5 @@
-import SolarScene from "./frames/SolarScene";
-import { useState } from "react";
-function App() {
-  const [resetKey, setResetKey] = useState(0);
-  const [speedTimes, setSpeedTimes] = useState(1)
-  return (
-    <div style={styles.app}>
-      <div style={styles.sceneWrapper}>
-        <div style={styles.controls}>
-          <button style={styles.resetButton} onClick={() => setResetKey((prev) => prev + 1)}>
-            ⟲ Reset
-          </button>
-          <div style={styles.speedControl}>
-            <label style={styles.speedLabel}>Speed: {speedTimes.toFixed(1)}</label>
-            <input type="range" min="0" max="5" step="0.2" value={speedTimes} onChange={(e)=>setSpeedTimes(parseFloat(e.target.value))} style={styles.slider}/>
-          </div>
-        </div>
-        <div style={styles.header}>
-          
-          <h1 style={styles.title}>Solar System Explorer</h1>
-          <p style={styles.subtitle}>
-            Click on any celestial body to explore what it is!
-          </p>
-        </div>
+const ACCENT = "#597bff";
 
-        <SolarScene resetKey = {resetKey} speedTimes = {speedTimes} />
-      </div>
-    </div>
-  );
-}
 const glassBase = {
   borderRadius: "999px",
   border: "1px solid rgba(255,255,255,0.2)",
@@ -68,7 +40,7 @@ const styles = {
 
   header: {
     position: "absolute",
-    top: "18px",
+    top: "3.5vmin",
     left: "50%",
     transform: "translateX(-50%)",
     textAlign: "center",
@@ -85,8 +57,6 @@ const styles = {
     color: "white",
     fontSize: "4.5vmin",
     fontWeight: 600,
-    background: "transparent",
-    
   },
 
   subtitle: {
@@ -94,17 +64,17 @@ const styles = {
     margin: "6px 0 0 0",
     color: "rgba(255,255,255,0.75)",
     fontSize: "1.7vmin",
-    background: "transparent",
-    
   },
 
   controls: {
     ...textBase,
     position: "absolute",
     width: "100%",
-    
   },
 
+  // ======================
+  // RESET BUTTON (TOP LEFT)
+  // ======================
   resetButton: {
     ...glassBase,
     ...absoluteTop,
@@ -117,6 +87,9 @@ const styles = {
     cursor: "pointer",
   },
 
+  // ======================
+  // SPEED CONTROL (TOP RIGHT)
+  // ======================
   speedControl: {
     ...glassBase,
     ...absoluteTop,
@@ -133,11 +106,9 @@ const styles = {
     ...textBase,
     fontSize: "2.25vmin",
     color: "#ddd",
-    
   },
 
   slider: {
-    
     width: "20vmin",
     marginTop: "1vmin",
     height: "4px",
@@ -147,6 +118,64 @@ const styles = {
     borderRadius: "999px",
     outline: "none",
   },
+
+  // ======================
+  // ABOUT PANEL (BOTTOM LEFT)
+  // ======================
+  aboutContainer: {
+    position: "absolute",
+    bottom: "3vmin",
+    left: "3vmin",
+    zIndex: 9999,
+  },
+
+  aboutButton: {
+    ...glassBase,
+    ...textBase,
+    padding: "1.5vmin 2.5vmin",
+    fontSize: "2vmin",
+    cursor: "pointer",
+  },
+
+  aboutPanel: {
+    position: "absolute",
+    bottom: "0",
+    left: "0",
+    width: "36vmin",
+    padding: "2vmin",
+    borderRadius: "16px",
+    background: "rgba(20,20,28,0.85)",
+    border: "1px solid rgba(255,255,255,0.2)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 0 20px rgba(0,0,0,0.4)",
+    transition: "all 0.25s ease",
+    transformOrigin: "bottom left",
+  },
+
+  aboutTitle: {
+    ...textBase,
+    margin: 0,
+    fontSize: "3vmin",
+    color: "white",
+  },
+
+  aboutText: {
+    ...textBase,
+    fontSize: "2vmin",
+    color: "rgba(255,255,255,0.75)",
+  },
+
+  aboutClose: {
+    ...glassBase,
+    ...textBase,
+    marginTop: "1vmin",
+    padding: "1vmin",
+    fontSize: "1.8vmin",
+    cursor: "pointer",
+    background: ACCENT,
+    borderRadius: "8px",
+    border: "1px solid rgba(89,123,255,0.4)",
+  },
 };
 
-export default App;
+export default styles;

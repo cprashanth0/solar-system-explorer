@@ -1,4 +1,4 @@
-import PopupStyles from "./PopupStyles";
+import PopupStyles from "../styles/PopupStyles";
 
 function PlanetTabs({ activeTab, setActiveTab, planetName }) {
   const tabs = [

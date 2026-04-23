@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PlanetTabs from "./PlanetTabs";
-import PopupStyles from "./PopupStyles";
+import PopupStyles from "../styles/PopupStyles";
 
 function PlanetPopup({ planet, onClose }) {
   if (!planet) return null;
