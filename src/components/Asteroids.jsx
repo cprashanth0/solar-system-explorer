@@ -37,7 +37,7 @@ function AsteroidBelt({ onPlanetClick, speedTimes }) {
         return (
           <div
             key={asteroid.id}
-            onClick={() => onPlanetClick(PlanetData.AsteroidBelt)}
+            onClick={(e) => onPlanetClick(PlanetData.AsteroidBelt, e)}
             style={{
               position: "absolute",
               left: "50%",

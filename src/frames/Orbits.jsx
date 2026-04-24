@@ -9,6 +9,7 @@ function Orbits({
   orbitColor = "rgba(255,255,255,0.18)",
   orbitThickness = 2,
   onPlanetClick,
+  planetData,
   rotateSpeed=70,
   resetKey,
 }) {
@@ -75,7 +76,7 @@ function Orbits({
         <Planet
           size={planetSize}
           image={image}
-          onClick={onPlanetClick}
+          onClick={(e) => onPlanetClick(planetData, e)}
           rotateSpeed={rotateSpeed}
         />
       </div>

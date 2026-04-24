@@ -10,7 +10,8 @@ function Venus({ onPlanetClick, resetKey, speedTimes }){
       image="images/icons/venus.png"
       speed={planetSpeed}
       orbitColor="rgba(230, 190, 120, 0.28)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Venus)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Venus}
       rotateSpeed = {6}
       resetKey = {resetKey}
     />

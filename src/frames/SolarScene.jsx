@@ -11,27 +11,40 @@ import PlanetPopup from "../Popup/PlanetPopup";
 import AsteroidBelt from "../components/Asteroids";
 import { useState } from "react";
 
-function SolarScene({resetKey, speedTimes}) {
+function SolarScene({ resetKey, speedTimes }) {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
-  //console.log(selectedPlanet);
+  const [popupOrigin, setPopupOrigin] = useState(null);
+  const handlePlanetClick = (planet, event) => {
+    const rect = event.target.getBoundingClientRect();
+
+    const origin = {
+      x: rect.left + rect.width / 2,
+      y: rect.top + rect.height / 2,
+    };
+
+    setPopupOrigin(origin);
+    setSelectedPlanet(planet);
+  };
+
   return (
     <>
       <div style={styles.scene}>
-      <Sun onPlanetClick={setSelectedPlanet}/>
-      <Mercury onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Venus onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Earth onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Mars onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <AsteroidBelt onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Jupiter onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Saturn onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Uranus onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      <Neptune onPlanetClick={setSelectedPlanet} resetKey = {resetKey} speedTimes = {speedTimes}/>
-      
-    </div>
-    <PlanetPopup
+        <Sun onPlanetClick={handlePlanetClick} />
+        <Mercury onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Venus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Earth onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Mars onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <AsteroidBelt onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Jupiter onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Saturn onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Uranus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        <Neptune onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+      </div>
+
+      <PlanetPopup
         planet={selectedPlanet}
         onClose={() => setSelectedPlanet(null)}
+        origin={popupOrigin}
       />
     </>
   );
@@ -67,6 +80,5 @@ const styles = {
       "1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px",
   },
 };
-
 
 export default SolarScene;

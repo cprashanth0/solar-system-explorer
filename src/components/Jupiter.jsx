@@ -9,7 +9,8 @@ function Jupiter({ onPlanetClick, resetKey, speedTimes }) {
       image="images/icons/jupiter.png"
       speed={planetSpeed}
       orbitColor="rgba(220, 170, 120, 0.26)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Jupiter)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Jupiter}
       rotateSpeed = {60}
       resetKey = {resetKey}
     />

@@ -9,7 +9,8 @@ function Mars({ onPlanetClick, resetKey, speedTimes }) {
       image="images/icons/mars.png"
       speed={planetSpeed}
       orbitColor="rgba(255, 120, 90, 0.28)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Mars)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Mars}
       rotateSpeed = {18}
       resetKey = {resetKey}
     />

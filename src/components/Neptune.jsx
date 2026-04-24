@@ -10,7 +10,8 @@ function Neptune({ onPlanetClick, resetKey, speedTimes }) {
       image="images/icons/neptune.png"
       speed={planetSpeed}
       orbitColor="rgba(110, 140, 255, 0.26)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Neptune)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Neptune}
       rotateSpeed = {150}
       resetKey = {resetKey}
     />

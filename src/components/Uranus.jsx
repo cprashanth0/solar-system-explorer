@@ -10,7 +10,8 @@ function Uranus({ onPlanetClick, resetKey, speedTimes }) {
       image={uranusImage}
       speed={planetSpeed}
       orbitColor="rgba(150, 235, 255, 0.26)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Uranus)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Uranus}
       rotateSpeed = {120}
       resetKey = {resetKey}
     />

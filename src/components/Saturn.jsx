@@ -5,11 +5,12 @@ function Saturn({ onPlanetClick, resetKey, speedTimes }) {
   return (
     <Orbits
       orbitSize={0.70}
-      planetSize={7.6} //4 actual
-      image="images/icons/saturn2.png"
+      planetSize={7.4} //4 actual
+      image="images/icons/saturn4.png"
       speed={planetSpeed}
       orbitColor="rgba(230, 210, 140, 0.26)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Saturn)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Saturn}
       rotateSpeed = {90}
       resetKey = {resetKey}
     />

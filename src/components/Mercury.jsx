@@ -10,7 +10,8 @@ function Mercury({onPlanetClick, resetKey, speedTimes}){
       image="images/icons/mercury.png"
       speed={planetSpeed}
       orbitColor="rgba(180, 180, 180, 0.28)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Mercury)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Mercury}
       orbitSpeed = {3}
       resetKey = {resetKey}
     />

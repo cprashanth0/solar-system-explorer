@@ -8,11 +8,12 @@ const PopupStyles = {
     justifyContent: "center",
     zIndex: 2000,
     padding: "2vmin",
+    
   },
 
   popup: {
-    minWidth: "55vmin",
-    minHeight: "55vmin",
+    minWidth: "65vmin",
+    minHeight: "40vmin",
     background:
       "linear-gradient(180deg, rgba(10,14,30,0.98) 0%, rgba(17,22,44,0.98) 100%)",
     color: "#ffffff",
@@ -25,6 +26,7 @@ const PopupStyles = {
     display: "flex",
     flexDirection: "column",
     backdropFilter: "blur(10px)",
+    transition: "all 2s ease",
     zIndex: 1000,
   },
 
@@ -57,7 +59,7 @@ const PopupStyles = {
     color: "rgba(255,255,255,0.78)",
     border: "none",
     borderRight: "1px solid rgba(255,255,255,0.08)",
-    fontSize: "2.1vmin",
+    fontSize: "2.7vmin",
     fontWeight: 600,
     letterSpacing: "0.1vmin",
     cursor: "pointer",
@@ -84,13 +86,6 @@ const PopupStyles = {
     justifyContent: "flex-start",
   },
 
-  heroSection: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "40vmin",
-  },
-
   centerPanel: {
     display: "flex",
     flexDirection: "column",
@@ -98,32 +93,30 @@ const PopupStyles = {
     justifyContent: "center",
     textAlign: "center",
     width: "100%",
-    maxWidth: "80vmin",
-    minHeight: "35vmin",
     margin: "0 auto",
   },
 
   // =========================
-  // TYPOGRAPHY SYSTEM
+  // MAIN INFO
   // =========================
 
   planetName: {
-    fontSize: "4.2vmin",
+    fontSize: "4.7vmin",
     fontWeight: 800,
     margin: "1.5vmin",
-    letterSpacing: "0.1vmin",
+    letterSpacing: "0.15vmin",
     textAlign: "center",
   },
 
   sectionHeading: {
-    fontSize: "3vmin",
+    fontSize: "2.5vmin",
     fontWeight: 700,
     marginBottom: "2vmin",
     textAlign: "center",
   },
 
   description: {
-    fontSize: "2.1vmin",
+    fontSize: "2.7vmin",
     lineHeight: 1.7,
     color: "rgba(255,255,255,0.84)",
     maxWidth: "70vmin",
@@ -132,7 +125,7 @@ const PopupStyles = {
   },
 
   factText: {
-    fontSize: "2.1vmin",
+    fontSize: "2.5vmin",
     lineHeight: 1.7,
     color: "#d7e4ff",
     maxWidth: "70vmin",
@@ -145,7 +138,7 @@ const PopupStyles = {
   },
 
   detailsText: {
-    fontSize: "1.7vmin",
+    fontSize: "2.5vmin",
     lineHeight: 1.8,
     color: "rgba(255,255,255,0.86)",
     maxWidth: "72vmin",
@@ -157,11 +150,10 @@ const PopupStyles = {
     border: "1px solid rgba(255,255,255,0.08)",
     borderRadius: "2vmin",
     padding: "2.2vmin",
-    minHeight: "40vmin",
   },
 
   // =========================
-  // STAT CARDS (UNIFIED SCALE)
+  // STAT CARDS 
   // =========================
 
   statCardGrid: {
@@ -182,13 +174,13 @@ const PopupStyles = {
   },
 
   statCardLabel: {
-    fontSize: "1.7vmin",
+    fontSize: "2vmin",
     color: "rgba(255,255,255,0.68)",
     marginBottom: "1vmin",
   },
 
   statCardValue: {
-    fontSize: "2.1vmin",
+    fontSize: "2.2vmin",
     fontWeight: 700,
     color: "#ffffff",
     lineHeight: 1.35,
@@ -207,7 +199,7 @@ const PopupStyles = {
 
   imageCaption: {
     marginTop: "1.2vmin",
-    fontSize: "1.8vmin",
+    fontSize: "2.4vmin",
     fontWeight: 600,
     color: "#ffffff",
     textAlign: "center",
@@ -216,7 +208,7 @@ const PopupStyles = {
   },
 
   imageCredit: {
-    fontSize: "1.4vmin",
+    fontSize: "1.6vmin",
     color: "rgba(255,255,255,0.55)",
     textAlign: "center",
     maxWidth: "60vmin",

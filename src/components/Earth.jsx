@@ -10,7 +10,8 @@ function Earth({ onPlanetClick, resetKey, speedTimes }) {
       image="images/icons/earth.png"
       speed={planetSpeed}
       orbitColor="rgba(100, 170, 255, 0.30)"
-      onPlanetClick={() => onPlanetClick(PlanetData.Earth)}
+      onPlanetClick={onPlanetClick}
+      planetData={PlanetData.Earth}
       rotateSpeed = {10}
       resetKey = {resetKey}
     />

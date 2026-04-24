@@ -1,4 +1,4 @@
-import sunImage from "/images/icons/sun.png";
+import sunImage from "/images/icons/sun2.png";
 import { PlanetData } from "../Popup/PlanetData";
 
 function Sun({ onPlanetClick }) {
@@ -25,7 +25,7 @@ function Sun({ onPlanetClick }) {
     cursor: "pointer",
   };
 
-  return <div style={sun} onClick={() => onPlanetClick(PlanetData.Sun)}></div>;
+  return <div style={sun} onClick={(e) => onPlanetClick(PlanetData.Sun, e)}></div>;
 }
 
 export default Sun;
