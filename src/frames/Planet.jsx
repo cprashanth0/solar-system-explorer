@@ -1,5 +1,6 @@
 function Planet({ size, image, onClick, rotateSpeed, isPaused }) {
-  const hitboxSize = size * 3;
+  
+  const hitboxSize = image.includes("saturn") ? (size * 1.5): (size * 3);
 
   const wrapper = {
     position: "absolute",

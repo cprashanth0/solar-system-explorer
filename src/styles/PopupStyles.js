@@ -7,17 +7,17 @@ const PopupStyles = {
     alignItems: "center",
     justifyContent: "center",
     zIndex: 2000,
-    padding: "20px",
+    padding: "2vmin",
   },
 
   popup: {
-    width: "min(600px, 92vw)",
-    minHeight: "600px",
+    minWidth: "55vmin",
+    minHeight: "55vmin",
     background:
       "linear-gradient(180deg, rgba(10,14,30,0.98) 0%, rgba(17,22,44,0.98) 100%)",
     color: "#ffffff",
     border: "1px solid rgba(255,255,255,0.12)",
-    borderRadius: "22px",
+    borderRadius: "2.5vmin",
     boxShadow:
       "0 18px 60px rgba(0,0,0,0.45), 0 0 30px rgba(90,130,255,0.12)",
     position: "relative",
@@ -30,15 +30,15 @@ const PopupStyles = {
 
   closeButton: {
     position: "absolute",
-    top: "7px",
-    right: "16px",
-    width: "38px",
-    height: "38px",
+    top: "1.2vmin",
+    right: "1.5vmin",
+    width: "4.2vmin",
+    height: "4.2vmin",
     borderRadius: "50%",
     border: "1px solid rgba(255,255,255,0.14)",
     background: "rgba(255,255,255,0.06)",
     color: "#fff",
-    fontSize: "20px",
+    fontSize: "2.2vmin",
     cursor: "pointer",
     zIndex: 20,
   },
@@ -52,14 +52,14 @@ const PopupStyles = {
 
   tabButton: {
     flex: 1,
-    padding: "16px 14px",
+    padding: "1.8vmin 1.6vmin",
     background: "transparent",
     color: "rgba(255,255,255,0.78)",
     border: "none",
     borderRight: "1px solid rgba(255,255,255,0.08)",
-    fontSize: "20px",
+    fontSize: "2.1vmin",
     fontWeight: 600,
-    letterSpacing: "0.2px",
+    letterSpacing: "0.1vmin",
     cursor: "pointer",
     transition: "all 0.2s ease",
     fontFamily: "Outfit, sans-serif",
@@ -69,7 +69,7 @@ const PopupStyles = {
     background:
       "linear-gradient(180deg, rgba(89,123,255,0.22) 0%, rgba(89,123,255,0.08) 100%)",
     color: "#ffffff",
-    boxShadow: "inset 0 -2px 0 #7da2ff",
+    boxShadow: "inset 0 -0.3vmin 0 #7da2ff",
   },
 
   lastTab: {
@@ -77,7 +77,7 @@ const PopupStyles = {
   },
 
   content: {
-    padding: "10px",
+    padding: "1.5vmin",
     flex: 1,
     display: "flex",
     flexDirection: "column",
@@ -88,8 +88,7 @@ const PopupStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: "380px",
-    marginTop: "0px",
+    minHeight: "40vmin",
   },
 
   centerPanel: {
@@ -99,144 +98,151 @@ const PopupStyles = {
     justifyContent: "center",
     textAlign: "center",
     width: "100%",
-    maxWidth: "680px",
-    minHeight: "320px",
+    maxWidth: "80vmin",
+    minHeight: "35vmin",
     margin: "0 auto",
   },
 
+  // =========================
+  // TYPOGRAPHY SYSTEM
+  // =========================
+
   planetName: {
-    fontSize: "45px",
+    fontSize: "4.2vmin",
     fontWeight: 800,
-    margin: "14px",
-    letterSpacing: "0.5px",
+    margin: "1.5vmin",
+    letterSpacing: "0.1vmin",
+    textAlign: "center",
+  },
+
+  sectionHeading: {
+    fontSize: "3vmin",
+    fontWeight: 700,
+    marginBottom: "2vmin",
     textAlign: "center",
   },
 
   description: {
-    fontSize: "20px",
+    fontSize: "2.1vmin",
     lineHeight: 1.7,
     color: "rgba(255,255,255,0.84)",
-    maxWidth: "620px",
-    margin: 8,
-    marginBottom: "18px",
+    maxWidth: "70vmin",
+    margin: "1vmin",
+    marginBottom: "2vmin",
   },
 
   factText: {
-    fontSize: "20px",
+    fontSize: "2.1vmin",
     lineHeight: 1.7,
     color: "#d7e4ff",
-    maxWidth: "620px",
-    margin: 8,
-    marginBottom: "18px",
+    maxWidth: "70vmin",
+    margin: "1vmin",
+    marginBottom: "2vmin",
     fontStyle: "italic",
-    border: "1px dashed",
-    borderRadius: "5px",
-    padding: "10px",
+    border: "1px dashed rgba(255,255,255,0.4)",
+    borderRadius: "0.8vmin",
+    padding: "1.2vmin",
   },
 
   detailsText: {
-    fontSize: "15px",
+    fontSize: "1.7vmin",
     lineHeight: 1.8,
     color: "rgba(255,255,255,0.86)",
-    maxWidth: "650px",
-    margin: 8,
+    maxWidth: "72vmin",
+    margin: "1vmin",
   },
 
   tabSection: {
     background: "rgba(255,255,255,0.04)",
     border: "1px solid rgba(255,255,255,0.08)",
-    borderRadius: "18px",
-    padding: "22px",
-    minHeight: "360px",
+    borderRadius: "2vmin",
+    padding: "2.2vmin",
+    minHeight: "40vmin",
   },
 
-  sectionHeading: {
-    fontSize: "30px",
-    fontWeight: 700,
-    marginBottom: "18px",
-    textAlign: "center",
-  },
+  // =========================
+  // STAT CARDS (UNIFIED SCALE)
+  // =========================
 
   statCardGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-    gap: "16px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(22vmin, 1fr))",
+    gap: "1.5vmin",
   },
 
   statCard: {
     background: "rgba(255,255,255,0.05)",
     border: "1px solid rgba(255,255,255,0.08)",
-    borderRadius: "16px",
-    padding: "18px",
-    minHeight: "55px",
+    borderRadius: "1.8vmin",
+    padding: "1.8vmin",
+    minHeight: "8vmin",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
   },
 
   statCardLabel: {
-    fontSize: "15px",
+    fontSize: "1.7vmin",
     color: "rgba(255,255,255,0.68)",
-    marginBottom: "12px",
+    marginBottom: "1vmin",
   },
 
   statCardValue: {
-    fontSize: "18px",
+    fontSize: "2.1vmin",
     fontWeight: 700,
     color: "#ffffff",
     lineHeight: 1.35,
   },
 
+  // =========================
+  // IMAGE SYSTEM
+  // =========================
+
   imageWrapper: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    gap: "14px",
-    
-    
+    gap: "1.5vmin",
   },
 
   imageCaption: {
-    marginTop: "10px",
-    fontSize: "16px",
+    marginTop: "1.2vmin",
+    fontSize: "1.8vmin",
     fontWeight: 600,
     color: "#ffffff",
     textAlign: "center",
-    maxWidth: "520px",
+    maxWidth: "60vmin",
     lineHeight: 1.6,
   },
 
+  imageCredit: {
+    fontSize: "1.4vmin",
+    color: "rgba(255,255,255,0.55)",
+    textAlign: "center",
+    maxWidth: "60vmin",
+    letterSpacing: "0.05vmin",
+  },
+
   imageOnlyPanel: {
-    minHeight: "360px",
+    minHeight: "35vmin",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "10px",
-    
-  },
-
-  imageCredit: {
-    fontSize: "12px",
-    color: "rgba(255,255,255,0.55)",
-    textAlign: "center",
-    maxWidth: "520px",
-    letterSpacing: "0.3px",
+    padding: "1vmin",
   },
 
   largePlanetImage: {
     maxWidth: "100%",
-    maxHeight: "320px",
-    width: "auto",
-    height: "auto",
+    maxHeight: "35vmin",
     objectFit: "cover",
     display: "block",
-    filter: "drop-shadow(0 0 28px rgba(255,255,255,0.18))",
-    borderRadius: "10px",
+    filter: "drop-shadow(0 0 2.5vmin rgba(255,255,255,0.18))",
+    borderRadius: "1vmin",
     border: "1px solid rgba(75, 65, 65, 0.44)",
   },
 
   emptyText: {
-    fontSize: "15px",
+    fontSize: "1.7vmin",
     color: "rgba(255,255,255,0.7)",
   },
 };
