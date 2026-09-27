@@ -1,3 +1,14 @@
+import sunDisplay from "/images/display/sunDisplay.png";
+import mercuryDisplay from "/images/display/mercuryDisplay.jpg";
+import venusDisplay from "/images/display/venusDisplay.jpg";
+import earthDisplay from "/images/display/earthDisplay.jpg";
+import marsDisplay from "/images/display/marsDisplay.jpg";
+import asteroidBeltDisplay from "/images/display/asteroidbelt.png";
+import jupiterDisplay from "/images/display/jupiterDisplay.jpg";
+import saturnDisplay from "/images/display/saturnDisplay.jpg";
+import uranusDisplay from "/images/display/uranusDisplay.jpg";
+import neptuneDisplay from "/images/display/neptuneDisplay.jpg";
+
 export const PlanetData = {
   Sun: {
     name: "Sun",
@@ -12,7 +23,7 @@ export const PlanetData = {
     dayLength: "About 27 Earth days",
     yearLength: "225-250 million years",
     moons: ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune",],
-    image: "images/display/sunDisplay.png",
+    image: sunDisplay,
     caption: "The Sun captured in extreme ultraviolet light.",
     credit: "ESA & NASA/Solar Orbiter/EUI team",
     extraStatLabel: "Temperature of the Sun's Core",
@@ -33,7 +44,7 @@ export const PlanetData = {
     yearLength: "88 Earth days",
     moons: "0",
     numMoons: "0",
-    image: "images/display/mercuryDisplay.jpg",
+    image: mercuryDisplay,
     caption: "Mercury on the Messenger aircraft's first flyby of the planet.",
     credit: "NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington",
     extraStatLabel: "Temperature Range",
@@ -54,7 +65,7 @@ export const PlanetData = {
     yearLength: "225 Earth days",
     moons: "0",
     numMoons: "0",
-    image: "images/display/venusDisplay.jpg",
+    image: venusDisplay,
     caption: "Venus taken by NASA's Mariner 10 Spacecraft.",
     credit: "NASA",
     extraStatLabel: "Hottest Surface Temperature",
@@ -75,7 +86,7 @@ export const PlanetData = {
     yearLength: "365.25 days",
     moons: ["Moon"],
     numMoons: "1",
-    image: "images/display/earthDisplay.jpg",
+    image: earthDisplay,
     caption: "Earth. Our home.",
     credit: "ESO/M. Kornmesser",
     extraStatLabel: "Surface Water Coverage",
@@ -96,7 +107,7 @@ export const PlanetData = {
     yearLength: "687 Earth days",
     moons: ["Phobos", "Deimos"],
     numMoons: "2",
-    image: "images/display/marsDisplay.jpg",
+    image: marsDisplay,
     caption: "An image of Mars centered on the Valles Marineris canyon system.",
     credit: "JPL-Caltech/NASA",
     extraStatLabel: "Height of Olympus Mons",
@@ -116,7 +127,7 @@ export const PlanetData = {
     dayLength: "Varies by object",
     yearLength: "About 3 to 6 Earth years",
     moons: ["Ceres", "Vesta", "Pallas", "Hygiea"],
-    image: "images/display/asteroidbelt.png",
+    image: asteroidBeltDisplay,
     caption: "An artist's concept of Arrokoth, an asteroid found in the Kuiper Belt.",
     credit: "Science Photo Library/Alamy By Jonathan O'Callaghan",
     numMoons: ">1 Million",
@@ -138,7 +149,7 @@ export const PlanetData = {
     yearLength: "11.86 Earth years",
     moons: ["Io", "Europa", "Ganymede", "Callisto"],
     numMoons: "95",
-    image: "images/display/jupiterDisplay.jpg",
+    image: jupiterDisplay,
     caption: "Jupiter simulated in its true colors by NASA's Cassini Spacecraft.",
     credit: "NASA/JPL/University of Arizona",
     extraStatLabel: "Total Mass",
@@ -159,7 +170,7 @@ export const PlanetData = {
     yearLength: "29.45 Earth years",
     moons: ["Titan", "Enceladus", "Rhea", "Iapetus"],
     numMoons: "146+",
-    image: "images/display/saturnDisplay.jpg",
+    image: saturnDisplay,
     caption: "Saturn as seen by the Hubble Space Telescope.",
     credit: "NASA, ESA, A. Simon (Goddard Space Flight Center), and M.H. Wong (University of California, Berkeley)",
     extraStatLabel: "Ring Span",
@@ -180,7 +191,7 @@ export const PlanetData = {
     yearLength: "84 Earth years",
     moons: ["Titania", "Oberon", "Umbriel", "Ariel", "Miranda"],
     numMoons: "28",
-    image: "images/display/uranusDisplay.jpg",
+    image: uranusDisplay,
     caption: "Uranus taken with its rings.",
     credit: "ESA/Hubble & NASA, L. Lamy / Observatoire de Paris",
     extraStatLabel: "Axial Tilt",
@@ -201,7 +212,7 @@ export const PlanetData = {
     yearLength: "164.8 Earth years",
     moons: ["Triton", "Proteus", "Nereid"],
     numMoons: "16",
-    image: "images/display/neptuneDisplay.jpg",
+    image: neptuneDisplay,
     caption: "Neptune with its rings, a rare sight on camera.",
     credit: "Unknown",
     extraStatLabel: "Fastest Winds",

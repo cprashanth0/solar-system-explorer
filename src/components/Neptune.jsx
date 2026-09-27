@@ -1,5 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
+import neptuneImage from "/images/icons/neptune.png";
 
 function Neptune({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.005 * speedTimes;
@@ -7,7 +8,7 @@ function Neptune({ onPlanetClick, resetKey, speedTimes }) {
     <Orbits
       orbitSize={0.92}
       planetSize={3}
-      image="images/icons/neptune.png"
+      image={neptuneImage}
       speed={planetSpeed}
       orbitColor="rgba(110, 140, 255, 0.26)"
       onPlanetClick={onPlanetClick}

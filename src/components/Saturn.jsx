@@ -1,12 +1,14 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
+import saturnImage from "/images/icons/saturn.png";
+
 function Saturn({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.01 * speedTimes;
   return (
     <Orbits
       orbitSize={0.70}
       planetSize={7.4} //4 actual
-      image="images/icons/saturn.png"
+      image={saturnImage}
       speed={planetSpeed}
       orbitColor="rgba(230, 210, 140, 0.26)"
       onPlanetClick={onPlanetClick}

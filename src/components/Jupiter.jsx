@@ -1,12 +1,14 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
+import jupiterImage from "/images/icons/jupiter.png";
+
 function Jupiter({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.013 * speedTimes;
   return (
     <Orbits
       orbitSize={0.58}
       planetSize={4.5}
-      image="images/icons/jupiter.png"
+      image={jupiterImage}
       speed={planetSpeed}
       orbitColor="rgba(220, 170, 120, 0.26)"
       onPlanetClick={onPlanetClick}

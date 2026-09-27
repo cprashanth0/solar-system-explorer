@@ -1,5 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
+import venusImage from "/images/icons/venus.png";
 
 function Venus({ onPlanetClick, resetKey, speedTimes }){
   const planetSpeed = 0.035 * speedTimes;
@@ -7,7 +8,7 @@ function Venus({ onPlanetClick, resetKey, speedTimes }){
     <Orbits
       orbitSize={0.26}
       planetSize={1.8}
-      image="images/icons/venus.png"
+      image={venusImage}
       speed={planetSpeed}
       orbitColor="rgba(230, 190, 120, 0.28)"
       onPlanetClick={onPlanetClick}

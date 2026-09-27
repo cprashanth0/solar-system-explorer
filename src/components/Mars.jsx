@@ -1,12 +1,14 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
+import marsImage from "/images/icons/mars.png";
+
 function Mars({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.024 * speedTimes;
   return (
     <Orbits
       orbitSize={0.42}
       planetSize={1.6}
-      image="images/icons/mars.png"
+      image={marsImage}
       speed={planetSpeed}
       orbitColor="rgba(255, 120, 90, 0.28)"
       onPlanetClick={onPlanetClick}
