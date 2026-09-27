@@ -19,7 +19,8 @@ function PlanetPopupContent({ planet, onClose, origin }) {
   const [activeTab, setActiveTab] = useState("overview");
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    setTimeout(() => setIsVisible(true), 10);
+    const timerId = setTimeout(() => setIsVisible(true), 10);
+    return () => clearTimeout(timerId);
   }, []);
 
   useEffect(() => {

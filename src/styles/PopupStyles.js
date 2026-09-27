@@ -26,7 +26,6 @@ const PopupStyles = {
     display: "flex",
     flexDirection: "column",
     backdropFilter: "blur(10px)",
-    transition: "all 2s ease",
     zIndex: 1000,
   },
 
