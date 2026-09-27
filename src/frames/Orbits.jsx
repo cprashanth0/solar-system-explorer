@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Planet from "./Planet";
 
 function Orbits({
@@ -14,17 +14,24 @@ function Orbits({
   resetKey,
   isRinged = false,
 }) {
-  const [angle, setAngle] = useState(0);
+  const angleRef = useRef(0);
   const lastTimeRef = useRef(null);
+  const rotatingLayerRef = useRef(null);
+
   useEffect(() => {
     let animationFrameId;
     lastTimeRef.current = null;
-    
+    angleRef.current = 0;
+
     const animate = (time) => {
       if (lastTimeRef.current !== null) {
         const deltaTime = time - lastTimeRef.current;
+        angleRef.current += speed * deltaTime;
 
-        setAngle((prev) => prev + speed * deltaTime);
+        if (rotatingLayerRef.current) {
+          rotatingLayerRef.current.style.transform =
+            `translate(-50%, -50%) rotate(${angleRef.current}deg)`;
+        }
       }
 
       lastTimeRef.current = time;
@@ -35,12 +42,6 @@ function Orbits({
 
     return () => cancelAnimationFrame(animationFrameId);
   }, [speed, resetKey]);
-  
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setAngle(0);
-    lastTimeRef.current = null;
-  }, [resetKey]);
   
   const size = `${orbitSize * 100}vmin`;
 
@@ -64,7 +65,7 @@ function Orbits({
     borderRadius: "50%",
     top: "50%",
     left: "50%",
-    transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+    transform: "translate(-50%, -50%)",
     zIndex: 4,
     pointerEvents: "none",
   };
@@ -73,14 +74,14 @@ function Orbits({
     <>
       <div style={orbitRing}></div>
 
-      <div style={rotatingLayer}>
+      <div style={rotatingLayer} ref={rotatingLayerRef}>
         <Planet
           size={planetSize}
           image={image}
           onClick={(e) => onPlanetClick(planetData, e)}
           rotateSpeed={rotateSpeed}
           label={planetData.name}
-          isRinger={isRinged}
+          isRinged={isRinged}
         />
       </div>
     </>
