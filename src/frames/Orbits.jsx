@@ -17,7 +17,10 @@ function Orbits({
   const angleRef = useRef(0);
   const lastTimeRef = useRef(null);
   const rotatingLayerRef = useRef(null);
-
+  const speedRef = useRef(speed);
+  useEffect(() => {
+    speedRef.current = speed;
+  }, [speed]);
   useEffect(() => {
     let animationFrameId;
     lastTimeRef.current = null;
@@ -26,7 +29,7 @@ function Orbits({
     const animate = (time) => {
       if (lastTimeRef.current !== null) {
         const deltaTime = time - lastTimeRef.current;
-        angleRef.current += speed * deltaTime;
+        angleRef.current += speedRef.current * deltaTime;
 
         if (rotatingLayerRef.current) {
           rotatingLayerRef.current.style.transform =
@@ -41,7 +44,7 @@ function Orbits({
     animationFrameId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [speed, resetKey]);
+  }, [resetKey]);
   
   const size = `${orbitSize * 100}vmin`;
 
