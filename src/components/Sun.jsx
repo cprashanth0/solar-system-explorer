@@ -24,8 +24,22 @@ function Sun({ onPlanetClick }) {
     zIndex: 10,
     cursor: "pointer",
   };
-
-  return <div style={sun} onClick={(e) => onPlanetClick(PlanetData.Sun, e)}></div>;
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onPlanetClick(PlanetData.Sun, e);
+    }
+  };
+    return (
+    <div
+      style={sun}
+      onClick={(e) => onPlanetClick(PlanetData.Sun, e)}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label="View information about the Sun"
+    ></div>
+  );
 }
 
 export default Sun;

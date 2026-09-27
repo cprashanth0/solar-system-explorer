@@ -78,6 +78,7 @@ function Orbits({
           image={image}
           onClick={(e) => onPlanetClick(planetData, e)}
           rotateSpeed={rotateSpeed}
+          label={planetData.name}
         />
       </div>
     </>

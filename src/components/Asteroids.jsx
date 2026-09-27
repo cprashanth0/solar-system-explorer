@@ -22,13 +22,22 @@ function AsteroidBelt({ onPlanetClick, speedTimes }) {
   const baseDuration = 200;
   const duration =
     speedTimes === 0 ? "999999s" : `${baseDuration / speedTimes}s`;
-
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onPlanetClick(PlanetData.AsteroidBelt, e);
+    }
+  };
   return (
     <div
       style={{
         ...belt,
         animation: `spin ${duration} linear infinite`,
       }}
+      role="button"
+      tabIndex={0}
+      aria-label="View information about the Asteroid Belt"
+      onKeyDown={handleKeyDown}
     >
       {asteroids.map((asteroid) => {
         const x = Math.cos(asteroid.angle) * asteroid.radius * 100;

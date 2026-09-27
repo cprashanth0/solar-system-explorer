@@ -1,4 +1,4 @@
-function Planet({ size, image, onClick, rotateSpeed, isPaused }) {
+function Planet({ size, image, onClick, rotateSpeed, isPaused, label }) {
   
   const hitboxSize = image.includes("saturn") ? (size * 1.5): (size * 3);
 
@@ -31,12 +31,25 @@ function Planet({ size, image, onClick, rotateSpeed, isPaused }) {
     animation: `spin ${rotateSpeed}s linear infinite`,
     animationPlayState: isPaused ? "paused" : "running",
   };
-
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onClick(e);
+    }
+  };
   return (
-    <div style={wrapper} onClick={onClick}>
+    <div
+      style={wrapper}
+      onClick={onClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label={`View information about ${label}`}
+    >
       <div style={planet}></div>
     </div>
   );
 }
+
 
 export default Planet;
