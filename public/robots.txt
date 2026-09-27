@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cprashanth0.github.io/solar-system-explorer/sitemap.xml
