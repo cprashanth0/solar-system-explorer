@@ -12,6 +12,7 @@ function Orbits({
   planetData,
   rotateSpeed=70,
   resetKey,
+  isRinged = false,
 }) {
   const [angle, setAngle] = useState(0);
   const lastTimeRef = useRef(null);
@@ -79,6 +80,7 @@ function Orbits({
           onClick={(e) => onPlanetClick(planetData, e)}
           rotateSpeed={rotateSpeed}
           label={planetData.name}
+          isRinger={isRinged}
         />
       </div>
     </>

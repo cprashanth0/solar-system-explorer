@@ -2,6 +2,8 @@ import SolarScene from "./frames/SolarScene";
 import styles from "./styles/appStyles"
 import { useState } from "react";
 import AboutPanel from "./frames/AboutPanel";
+import ErrorBoundary from "./frames/ErrorBoundary";
+
 function App() {
   const [resetKey, setResetKey] = useState(0);
   const [speedTimes, setSpeedTimes] = useState(1)
@@ -25,7 +27,9 @@ function App() {
           </p>
         </div>
 
-        <SolarScene resetKey = {resetKey} speedTimes = {speedTimes} />
+        <ErrorBoundary>
+          <SolarScene resetKey = {resetKey} speedTimes = {speedTimes} />
+        </ErrorBoundary>
         <AboutPanel />
       </div>
     </div>

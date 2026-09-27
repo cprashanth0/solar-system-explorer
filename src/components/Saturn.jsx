@@ -13,6 +13,7 @@ function Saturn({ onPlanetClick, resetKey, speedTimes }) {
       planetData={PlanetData.Saturn}
       rotateSpeed = {90}
       resetKey = {resetKey}
+      isRinged={true}
     />
   );
 }

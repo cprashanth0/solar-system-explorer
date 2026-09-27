@@ -1,6 +1,6 @@
-function Planet({ size, image, onClick, rotateSpeed, isPaused, label }) {
+function Planet({ size, image, onClick, rotateSpeed, isPaused, label, isRinged = false }) {
   
-  const hitboxSize = image.includes("saturn") ? (size * 1.5): (size * 3);
+  const hitboxSize = isRinged ? (size * 1.5): (size * 3);
 
   const wrapper = {
     position: "absolute",
@@ -16,8 +16,8 @@ function Planet({ size, image, onClick, rotateSpeed, isPaused, label }) {
     alignItems: "center",
     justifyContent: "center",
   };
-  const bS = image.includes("saturn") ? "none" : "0 0 6px rgba(255, 255, 255, 0.25)";
-  const bord = image.includes("saturn") ? "none" : "1px solid rgba(255,255,255,0.18)";
+  const bS = isRinged ? "none" : "0 0 6px rgba(255, 255, 255, 0.25)";
+  const bord = isRinged ? "none" : "1px solid rgba(255,255,255,0.18)";
   const planet = {
     width: `${size}vmin`,
     height: `${size}vmin`,
