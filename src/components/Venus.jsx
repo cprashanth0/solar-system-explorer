@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import venusImage from "/images/icons/venus.png";
+import venusImage from "../assets/icons/venus.webp";
 
 function Venus({ onPlanetClick, resetKey, speedTimes }){
   const planetSpeed = 0.035 * speedTimes;

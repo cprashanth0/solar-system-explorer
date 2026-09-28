@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import saturnImage from "/images/icons/saturn.png";
+import saturnImage from "../assets/icons/saturn.webp";
 
 function Saturn({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.01 * speedTimes;

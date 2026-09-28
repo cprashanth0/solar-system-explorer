@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import marsImage from "/images/icons/mars.png";
+import marsImage from "../assets/icons/mars.webp";
 
 function Mars({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.024 * speedTimes;

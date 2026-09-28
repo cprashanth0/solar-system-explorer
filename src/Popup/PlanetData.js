@@ -1,13 +1,13 @@
-import sunDisplay from "/images/display/sunDisplay.png";
-import mercuryDisplay from "/images/display/mercuryDisplay.jpg";
-import venusDisplay from "/images/display/venusDisplay.jpg";
-import earthDisplay from "/images/display/earthDisplay.jpg";
-import marsDisplay from "/images/display/marsDisplay.jpg";
-import asteroidBeltDisplay from "/images/display/asteroidbelt.png";
-import jupiterDisplay from "/images/display/jupiterDisplay.jpg";
-import saturnDisplay from "/images/display/saturnDisplay.jpg";
-import uranusDisplay from "/images/display/uranusDisplay.jpg";
-import neptuneDisplay from "/images/display/neptuneDisplay.jpg";
+import sunDisplay from "../assets/display/sunDisplay.webp";
+import mercuryDisplay from "../assets/display/mercuryDisplay.webp";
+import venusDisplay from "../assets/display/venusDisplay.webp";
+import earthDisplay from "../assets/display/earthDisplay.webp";
+import marsDisplay from "../assets/display/marsDisplay.webp";
+import asteroidBeltDisplay from "../assets/display/asteroidbelt.webp";
+import jupiterDisplay from "../assets/display/jupiterDisplay.webp";
+import saturnDisplay from "../assets/display/saturnDisplay.webp";
+import uranusDisplay from "../assets/display/uranusDisplay.webp";
+import neptuneDisplay from "../assets/display/neptuneDisplay.webp";
 
 export const PlanetData = {
   Sun: {

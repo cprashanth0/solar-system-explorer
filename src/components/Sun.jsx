@@ -1,4 +1,4 @@
-import sunImage from "/images/icons/sun.png";
+import sunImage from "../assets/icons/sun.webp";
 import { PlanetData } from "../Popup/PlanetData";
 
 function Sun({ onPlanetClick }) {

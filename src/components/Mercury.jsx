@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import mercuryImage from "/images/icons/mercury.png";
+import mercuryImage from "../assets/icons/mercury.webp";
 
 function Mercury({onPlanetClick, resetKey, speedTimes}){
   const planetSpeed = 0.06 * speedTimes;

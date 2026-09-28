@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import uranusImage from "/images/icons/uranus.png";
+import uranusImage from "../assets/icons/uranus.webp";
 
 function Uranus({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.007 * speedTimes;

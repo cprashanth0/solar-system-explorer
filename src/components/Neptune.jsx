@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import neptuneImage from "/images/icons/neptune.png";
+import neptuneImage from "../assets/icons/neptune.webp";
 
 function Neptune({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.005 * speedTimes;

@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import earthImage from "/images/icons/earth.png";
+import earthImage from "../assets/icons/earth.webp";
 
 function Earth({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.03 * speedTimes;

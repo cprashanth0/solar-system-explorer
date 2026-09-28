@@ -1,6 +1,6 @@
 import Orbits from "../frames/Orbits.jsx";
 import { PlanetData } from "../Popup/PlanetData.js";
-import jupiterImage from "/images/icons/jupiter.png";
+import jupiterImage from "../assets/icons/jupiter.webp";
 
 function Jupiter({ onPlanetClick, resetKey, speedTimes }) {
   const planetSpeed = 0.013 * speedTimes;

@@ -24,6 +24,13 @@ function PlanetPopupContent({ planet, onClose, origin }) {
   }, []);
 
   useEffect(() => {
+    if (planet.image) {
+      const preload = new Image();
+      preload.src = planet.image;
+    }
+  }, [planet.image]);
+  
+  useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape") onClose();
     };
