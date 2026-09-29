@@ -11,19 +11,20 @@ function App() {
     <div style={styles.app}>
       <div style={styles.sceneWrapper}>
         <div style={styles.controls}>
-          <button style={styles.resetButton} onClick={() => setResetKey((prev) => prev + 1)}>
+          <button style={styles.resetButton} onClick={() => {setResetKey((prev) => prev + 1); setSpeedTimes(1)}}>
             ⟲ Reset
           </button>
           <div style={styles.speedControl}>
-            <label style={styles.speedLabel}>Speed: {speedTimes.toFixed(1)}</label>
-            <input type="range" min="0" max="5" step="0.2" value={speedTimes} onChange={(e)=>setSpeedTimes(parseFloat(e.target.value))} style={styles.slider}/>
+            <label style={styles.speedLabel}>Speed: {speedTimes.toFixed(1)}x</label>
+            <input type="range" min="0" max="8" step="0.2" value={speedTimes} onChange={(e)=>setSpeedTimes(parseFloat(e.target.value))} style={styles.slider}/>
+            {/* slider MIN & MAX here */}
           </div>
         </div>
         <div style={styles.header}>
           
           <h1 style={styles.title}>Solar System Explorer</h1>
           <p style={styles.subtitle}>
-            Click on any celestial body to explore what it is!
+            Click on any celestial body to explore fun facts about it!
           </p>
         </div>
 

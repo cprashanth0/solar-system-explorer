@@ -9,11 +9,13 @@ import Uranus from "../components/Uranus";
 import Neptune from "../components/Neptune";
 import PlanetPopup from "../Popup/PlanetPopup";
 import AsteroidBelt from "../components/Asteroids";
+import useZoomPan from "../hooks/useZoomPan";
 import { useState } from "react";
 
 function SolarScene({ resetKey, speedTimes }) {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   const [popupOrigin, setPopupOrigin] = useState(null);
+  const { sceneRef, worldRef } = useZoomPan(resetKey);
   const handlePlanetClick = (planet, event) => {
     const rect = event.target.getBoundingClientRect();
 
@@ -28,17 +30,19 @@ function SolarScene({ resetKey, speedTimes }) {
 
   return (
     <>
-      <div style={styles.scene}>
-        <Sun onPlanetClick={handlePlanetClick} />
-        <Mercury onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Venus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Earth onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Mars onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <AsteroidBelt onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Jupiter onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Saturn onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Uranus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-        <Neptune onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+      <div ref={sceneRef} style={styles.scene}>
+        <div ref={worldRef} style={styles.world}>
+          <Sun onPlanetClick={handlePlanetClick} />
+          <Mercury onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Venus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Earth onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Mars onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <AsteroidBelt onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Jupiter onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Saturn onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Uranus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Neptune onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+        </div>
       </div>
 
       <PlanetPopup
@@ -74,10 +78,18 @@ const styles = {
       radial-gradient(1px 1px at 540px 40px, rgba(255,255,255,0.7), transparent),
       radial-gradient(1px 1px at 840px 280px, rgba(255,255,255,0.75), transparent),
       radial-gradient(1px 1px at 1160px 180px, rgba(255,255,255,0.7), transparent)
-    `,
+      `,
     backgroundRepeat: "repeat",
-    backgroundSize:
-      "1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px",
+    backgroundSize: "1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px",
+    touchAction: "none",
+  },
+  world: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    transformOrigin: "50% 50%",
   },
 };
 

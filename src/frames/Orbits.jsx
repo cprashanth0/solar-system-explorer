@@ -28,7 +28,7 @@ function Orbits({
 
     const animate = (time) => {
       if (lastTimeRef.current !== null) {
-        const deltaTime = time - lastTimeRef.current;
+        const deltaTime = Math.min(time - lastTimeRef.current, 50);
         angleRef.current += speedRef.current * deltaTime;
 
         if (rotatingLayerRef.current) {
