@@ -96,10 +96,10 @@ const styles = {
     right: "3vmin",
     display: "flex",
     flexDirection: "column",
-    gap: "4px",
-    padding: "2vmin 3vmin 3vmin",
-    width: "20vmin",
-    height: "4.5vmin",
+    gap: "1.2vmin",
+    padding: "2vmin 3vmin",
+    width: "24vmin",
+    borderRadius: "3vmin",
   },
 
   speedLabel: {
@@ -109,7 +109,7 @@ const styles = {
   },
 
   slider: {
-    width: "20vmin",
+    width: "100%",
     marginTop: "1vmin",
     height: "4px",
     cursor: "pointer",
@@ -117,6 +117,35 @@ const styles = {
     background: "rgba(255,255,255,0.15)",
     borderRadius: "999px",
     outline: "none",
+  },
+
+  // "1 Earth year = N sec" line under the slider
+  speedNote: {
+    ...textBase,
+    fontSize: "1.6vmin",
+    color: "rgba(255,255,255,0.65)",
+    lineHeight: 1.3,
+  },
+
+  // Realism checkbox row, separated from the speed controls by a thin line
+  realismRow: {
+    ...textBase,
+    display: "flex",
+    alignItems: "center",
+    gap: "1vmin",
+    paddingTop: "1.2vmin",
+    borderTop: "1px solid rgba(255,255,255,0.15)",
+    fontSize: "2vmin",
+    color: "#ddd",
+    cursor: "pointer",
+  },
+
+  realismCheckbox: {
+    width: "2.2vmin",
+    height: "2.2vmin",
+    margin: 0,
+    accentColor: ACCENT,
+    cursor: "pointer",
   },
 
   // ======================

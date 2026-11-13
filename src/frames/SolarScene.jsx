@@ -1,21 +1,16 @@
 import Sun from "../components/Sun";
-import Earth from "../components/Earth";
-import Mars from "../components/Mars";
-import Mercury from "../components/Mercury";
-import Venus from "../components/Venus";
-import Jupiter from "../components/Jupiter";
-import Saturn from "../components/Saturn";
-import Uranus from "../components/Uranus";
-import Neptune from "../components/Neptune";
 import PlanetPopup from "../Popup/PlanetPopup";
 import AsteroidBelt from "../components/Asteroids";
+import Orbits from "./Orbits.jsx";
+import { PLANETS, getPlanetView, getSunSize, getMaxZoom } from "../components/planetConfig.js";
+import { PopupData } from "../Popup/PopupData.js";
 import useZoomPan from "../hooks/useZoomPan";
 import { useState } from "react";
 
-function SolarScene({ resetKey, speedTimes }) {
+function SolarScene({ resetKey, speedTimes, isRealistic }) {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   const [popupOrigin, setPopupOrigin] = useState(null);
-  const { sceneRef, worldRef } = useZoomPan(resetKey);
+  const { sceneRef, worldRef } = useZoomPan(resetKey, getMaxZoom(isRealistic));
   const handlePlanetClick = (planet, event) => {
     const rect = event.target.getBoundingClientRect();
 
@@ -23,7 +18,6 @@ function SolarScene({ resetKey, speedTimes }) {
       x: rect.left + rect.width / 2,
       y: rect.top + rect.height / 2,
     };
-
     setPopupOrigin(origin);
     setSelectedPlanet(planet);
   };
@@ -32,16 +26,33 @@ function SolarScene({ resetKey, speedTimes }) {
     <>
       <div ref={sceneRef} style={styles.scene}>
         <div ref={worldRef} style={styles.world}>
-          <Sun onPlanetClick={handlePlanetClick} />
-          <Mercury onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Venus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Earth onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Mars onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <AsteroidBelt onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Jupiter onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Saturn onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Uranus onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
-          <Neptune onPlanetClick={handlePlanetClick} resetKey={resetKey} speedTimes={speedTimes} />
+          <Sun onPlanetClick={handlePlanetClick} size={getSunSize(isRealistic)} />
+          <AsteroidBelt
+            onPlanetClick={handlePlanetClick}
+            resetKey={resetKey}
+            speedTimes={speedTimes}
+            isRealistic={isRealistic}
+          />
+          {PLANETS.map((p) => {
+            const view = getPlanetView(p, isRealistic);
+            return (
+              <Orbits
+                key={p.name}
+                orbitSize={view.orbitSize}
+                planetSize={view.planetSize}
+                image={p.image}
+                speed={view.speed * speedTimes}
+                orbitColor={p.orbitColor}
+                onPlanetClick={handlePlanetClick}
+                popupData={PopupData[p.name]}
+                rotateSpeed={p.rotateSpeed}
+                isRinged={p.isRinged}
+                resetKey={resetKey}
+                minPx={view.minPx}
+                orbitThickness={view.orbitThickness}
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -65,6 +76,7 @@ const styles = {
     overflow: "hidden",
     backgroundColor: "#000000",
     zIndex: 0,
+    touchAction: "none",
     backgroundImage: `
       radial-gradient(2px 2px at 40px 60px, rgba(255,255,255,0.95), transparent),
       radial-gradient(1.5px 1.5px at 140px 130px, rgba(255,255,255,0.85), transparent),
@@ -78,10 +90,10 @@ const styles = {
       radial-gradient(1px 1px at 540px 40px, rgba(255,255,255,0.7), transparent),
       radial-gradient(1px 1px at 840px 280px, rgba(255,255,255,0.75), transparent),
       radial-gradient(1px 1px at 1160px 180px, rgba(255,255,255,0.7), transparent)
-      `,
+    `,
     backgroundRepeat: "repeat",
-    backgroundSize: "1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px",
-    touchAction: "none",
+    backgroundSize:
+      "1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px, 1200px 320px",
   },
   world: {
     position: "absolute",

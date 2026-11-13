@@ -1,8 +1,7 @@
 import sunImage from "../assets/icons/sun.webp";
-import { PlanetData } from "../Popup/PlanetData";
+import { PopupData } from "../Popup/PopupData";
 
-function Sun({ onPlanetClick }) {
-  const size = "9"
+function Sun({ onPlanetClick, size }) {
   const sun = {
     position: "absolute",
     width: `${size}vmin`,
@@ -27,13 +26,13 @@ function Sun({ onPlanetClick }) {
   const handleKeyDown = (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      onPlanetClick(PlanetData.Sun, e);
+      onPlanetClick(PopupData.Sun, e);
     }
   };
     return (
     <div
       style={sun}
-      onClick={(e) => onPlanetClick(PlanetData.Sun, e)}
+      onClick={(e) => onPlanetClick(PopupData.Sun, e)}
       onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}

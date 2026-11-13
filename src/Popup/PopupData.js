@@ -9,7 +9,7 @@ import saturnDisplay from "../assets/display/saturnDisplay.webp";
 import uranusDisplay from "../assets/display/uranusDisplay.webp";
 import neptuneDisplay from "../assets/display/neptuneDisplay.webp";
 
-export const PlanetData = {
+export const PopupData = {
   Sun: {
     name: "Sun",
     description: "The Sun is the star at the center of our solar system and contains almost all of its mass.",

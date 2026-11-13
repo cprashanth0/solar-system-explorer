@@ -34,3 +34,18 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 10px rgba(89,123,255,0.5);
   cursor: pointer;
 }
+
+@property --spin-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes spin-angle {
+  from {
+    --spin-angle: 0deg;
+  }
+  to {
+    --spin-angle: 360deg;
+  }
+}
